@@ -11,3 +11,15 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 !/.idea/
+
+.idea/getbin.iml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/vcs.xml
+
+bin/getbin-darwin-amd64
+
+bin/getbin-linux-amd64
