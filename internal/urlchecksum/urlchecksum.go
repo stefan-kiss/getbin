@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2020. Stefan Kiss
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+package urlchecksum
+
+import (
+	"crypto/sha512"
+	"fmt"
+	"github.com/hashicorp/go-getter"
+	"io"
+	"io/ioutil"
+	"os"
+	"path/filepath"
+)
+
+func Calculate(url string) (checksum string, err error) {
+
+	dir, err := ioutil.TempDir(os.TempDir(), "getbin_")
+	if err != nil {
+		return "", fmt.Errorf("unable to create temp dir: %w", err)
+	}
+
+	defer os.RemoveAll(dir)
+	filedest := filepath.Join(dir, "testfile")
+
+	err = getter.GetFile(filedest, url)
+	if err != nil {
+		return "", err
+	}
+	tempfile, err := os.Open(filedest)
+	if err != nil {
+		return "", err
+	}
+
+	hasher := sha512.New()
+	sha512.New()
+	_, err = io.Copy(hasher, tempfile)
+
+	return fmt.Sprintf("%x", hasher.Sum(nil)), nil
+}

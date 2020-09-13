@@ -1,0 +1,120 @@
+containerd:
+  url: https://github.com/containerd/containerd/releases/download/v{{.Version}}/containerd-{{.Version}}-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://github.com/containerd/containerd/releases/download/v(?P<version>.*)/containerd-(?P<version>.*)-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: tgz
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.4.0
+    os: linux
+    arch: amd64
+    hash: 9f38a18b0b67748a50f34b45a409e261f77eddc12f57114778aa0fce7448980a766adee5c0b355aad7ebd6429677631f5cda205e7e5460f2d1773e505c067c7e
+crictl:
+  url: https://github.com/kubernetes-sigs/cri-tools/releases/download/v{{.Version}}/crictl-v{{.Version}}-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://github.com/kubernetes-sigs/cri-tools/releases/download/v(?P<version>.*)/crictl-v(?P<version>.*)-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: tgz
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.19.0
+    os: linux
+    arch: amd64
+    hash: fbbb34a1667bcf94df911a92ab6b70a9d2b34da967244a222f288bf0135c587cbfdcc89deedc5afd1823e109921df9caaa4e9ff9cc39e55a9b8cdea8eb6ebe72
+genkubessl:
+  url: https://github.com/stefan-kiss/genkubessl/releases/download/v{{.Version}}/genkubessl-v{{.Version}}-{{.Os}}-{{.Arch}}
+  urlmatch: https://github.com/stefan-kiss/genkubessl/releases/download/v(?P<version>.*)/genkubessl-v(.*)-(?P<os>.*)-(?P<arch>.*)
+  format: binary
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 0.0.7
+    os: darwin
+    arch: amd64
+    hash: d906bde84858ed4464a0fe43ea58261728d32a53d0594274e2df452b68989bf9d4f3a3120c1200af1b60686060ff74b8cb823b2f1310e95e1558585173b9c87c
+  - version: 0.0.7
+    os: linux
+    arch: amd64
+    hash: b70de50f3730bcef58580be779909b34ef886a2822dffc7d054bee0b73708275855906b7c33fe7d6ff26f28ac87d0881466a483b7ddcf13c9cebf9a6a4d94008
+  - version: 0.0.7
+    os: windows
+    arch: amd64.exe
+    hash: ea205025c5084f6969c8e12ef7fc747ee70acb63ec1477328fede31f57acc09ecd6184d8130a0c737f199dbd65bac85de26c941e7e0405ca40846574a7605921
+kubeclient:
+  url: https://dl.k8s.io/v{{.Version}}/kubernetes-client-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://dl.k8s.io/v(?P<version>.*)/kubernetes-client-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: tgz
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.19.1
+    os: darwin
+    arch: amd64
+    hash: e2926509570d772816de6dd23dc31c23833ed777be924abfb6d14901bd8b653fa8d7345b21b91f005e748813d5cbdb26168b6065a31219dfb6cc2686b4e878ac
+  - version: 1.19.1
+    os: linux
+    arch: amd64
+    hash: 424ba5a094947e62c935ad7049efc13762f2f232ed05872e4f3945b3c39d6e6c82d1e3f60d0970fdc8f01cf4886ef5de77224df7e481774c04d86429dbfb2055
+  - version: 1.19.1
+    os: windows
+    arch: amd64
+    hash: a3b219ffeb432ecefd64f7734207b51e048c631cb28e989f86ce75815a5cc9927b9d3e7ee06d0f02c5f5a299c0e3b21d62c9c462c52d80810fb3a8424087c445
+kubenode:
+  url: https://dl.k8s.io/v{{.Version}}/kubernetes-node-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://dl.k8s.io/v(?P<version>.*)/kubernetes-node-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: tgz
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.19.1
+    os: linux
+    arch: amd64
+    hash: 16d32f85594ca6b3f26ac6827be2ea927b79966efa55edcab1f3d5628744759a1e1f7c04e50dfe47da17a2d63f70cc5989ae47f057bc958c6f4c52461406090c
+kubeserver:
+  url: https://dl.k8s.io/v{{.Version}}/kubernetes-server-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://dl.k8s.io/v(?P<version>.*)/kubernetes-server-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: tgz
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.19.1
+    os: linux
+    arch: amd64
+    hash: 70f0389c8c5f35eaa67736aebb857f0b26ca777a77662c21ebd2b719608c16663e888b8e1b93e90564c206f179524ff421dbb5cb1f3289a71f27eca388087451
+runc:
+  url: https://github.com/opencontainers/runc/releases/download/v{{.Version}}/runc.{{.Arch}}
+  urlmatch: https://github.com/opencontainers/runc/releases/download/v(?P<version>.*)/runc.(?P<arch>.*)
+  format: binary
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: 1.0.0-rc92
+    arch: amd64
+    hash: 7a99543d02283d35e28196a5c7c34cd6454584c79775b4e3138801c169a438f8714b4bbdabd01fbf860955a8f9a703070d840d55e74a485e8ffaa1f529cca830

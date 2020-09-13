@@ -1,0 +1,22 @@
+kubectl:
+  url: https://dl.k8s.io/{{.Version}}/kubernetes-client-{{.Os}}-{{.Arch}}.tar.gz
+  urlmatch: https://dl.k8s.io/(?P<version>.*)/kubernetes-client-(?P<os>.*)-(?P<arch>.*).tar.gz
+  format: archive
+  owner: root
+  group: root
+  perms: "0755"
+  filemap:
+  - name: kubectl
+    destination: /usr/local/bin/kubectl
+  hashes:
+  - version: v1.19.0
+    os: linux
+    arch: amd64
+    hash: 1590d4357136a71a70172e32820c4a68430d1b94cf0ac941ea17695fbe0c5440d13e26e24a2e9ebdd360c231d4cd16ffffbbe5b577c898c78f7ebdc1d8d00fa3
+  - version: v1.19.0
+    os: darwin
+    arch: amd64
+    hash: 7093a34298297e46bcd1ccb77a9c83ca93b8ccb63ce2099d3d8cd8911ccc384470ac202644843406f031c505a8960d247350a740d683d8910ca70a0b58791a1b
+  - version: v1.19.0
+    os: windows
+    arch: amd64

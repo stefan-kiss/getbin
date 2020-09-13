@@ -10,7 +10,6 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
-!/.idea/
 
 .idea/getbin.iml
 
@@ -20,6 +19,10 @@
 
 .idea/vcs.xml
 
-bin/getbin-darwin-amd64
+bin/**
+cache/**
+test/cache/**
+test/usr/**
 
-bin/getbin-linux-amd64
+/.idea/
+/sources.yaml
