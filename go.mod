@@ -1,6 +1,6 @@
 module github.com/stefan-kiss/getbin
 
-go 1.13
+go 1.15
 
 require (
 	github.com/cavaliercoder/grab v1.0.1-0.20200703095818-d3334b8f122d // indirect
