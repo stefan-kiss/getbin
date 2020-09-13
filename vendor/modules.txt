@@ -70,6 +70,7 @@ github.com/googleapis/gax-go/v2
 # github.com/hashicorp/go-cleanhttp v0.5.0
 github.com/hashicorp/go-cleanhttp
 # github.com/hashicorp/go-getter v1.4.1
+## explicit
 github.com/hashicorp/go-getter
 github.com/hashicorp/go-getter/helper/url
 # github.com/hashicorp/go-safetemp v1.0.0
@@ -93,8 +94,6 @@ github.com/hashicorp/hcl/json/token
 github.com/inconshreveable/mousetrap
 # github.com/jmespath/go-jmespath v0.0.0-20160202185014-0b12d6b521d8
 github.com/jmespath/go-jmespath
-# github.com/k0kubun/pp v3.0.1+incompatible
-github.com/k0kubun/pp
 # github.com/klauspost/compress v1.9.2
 github.com/klauspost/compress/flate
 github.com/klauspost/compress/fse
@@ -108,11 +107,8 @@ github.com/klauspost/pgzip
 github.com/konsorten/go-windows-terminal-sequences
 # github.com/magiconair/properties v1.8.0
 github.com/magiconair/properties
-# github.com/mattn/go-colorable v0.1.4
-github.com/mattn/go-colorable
-# github.com/mattn/go-isatty v0.0.8
-github.com/mattn/go-isatty
 # github.com/mholt/archiver/v3 v3.3.0
+## explicit
 github.com/mholt/archiver/v3
 # github.com/mitchellh/go-homedir v1.1.0
 github.com/mitchellh/go-homedir
@@ -128,6 +124,7 @@ github.com/pelletier/go-toml
 github.com/pierrec/lz4
 github.com/pierrec/lz4/internal/xxh32
 # github.com/sirupsen/logrus v1.6.0
+## explicit
 github.com/sirupsen/logrus
 # github.com/spf13/afero v1.1.2
 github.com/spf13/afero
@@ -135,12 +132,14 @@ github.com/spf13/afero/mem
 # github.com/spf13/cast v1.3.0
 github.com/spf13/cast
 # github.com/spf13/cobra v1.0.0
+## explicit
 github.com/spf13/cobra
 # github.com/spf13/jwalterweatherman v1.0.0
 github.com/spf13/jwalterweatherman
 # github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
 # github.com/spf13/viper v1.4.0
+## explicit
 github.com/spf13/viper
 # github.com/ulikunitz/xz v0.5.6
 github.com/ulikunitz/xz
@@ -250,4 +249,5 @@ google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
 # gopkg.in/yaml.v2 v2.2.2
+## explicit
 gopkg.in/yaml.v2
