@@ -1,13 +1,15 @@
 language: go
 go:
-    - 1.15.x
+- 1.15.x
 
 deploy:
-    provider: releases
-    api_key:
-        secure: ChL+Uc1S8V93MFdTwW1yo6tsdjK+/LDXok75E4sfuwGnnJNBl0e62GKZ6Bcx+WBColvmjoUIsx35xsHYxujlPHnb+8TgBkhI20drwGKx0DcHSTeIP2K1Y5NH+GsjtRt8cukHHiQXQCgcjoryG0l9VGPr93wFN8wkU/ZdlxXXIy45FpC9TcP86ErXKVWiuaTD5KdTi8fuek8QPMQoCIyzCKf53WFzey+Sqsk/qvsR13WiNzSEfvwD5Qu8VW3Apgil3ltYd85IX4SycYZvIaQBjWJgdglRbsb3DNyKx9jTdlyo0gi2iGQ3/k2MbOX1jU3fpWU/5ySgqQJZcjWdbQHs4tHcLVuFacEPUnn9fAVYztiTvNf7X4PHCqN18a/2i9+Qy+5xCAoDCaPb6w+UeNa/tmYvj9ppp30MrXB+1KO+2bBiT/b5R0AC+WDMdO+d2KRjmagCoTHP1SNoHekNLe7EfdKWNpdB+3JD1JPHU5K3Xo3DSNal1hHwlzuS4JLDyOfaEQ5J9+8Vo75GMWe1gfYZrqmg/GwJNRkY1SkBv8ltMUfY6f1dmi9+zFBKLsSB5DPT7pEprQR4OhbWhsmdR2g+0npPfFjANXvWU3PCfLJCarvvpGSSmif5jePRwA9zNX7mZ8d/Avd/z2OKxI1AtJ6sGHW/lpwTRz3hdO932qI297U=
-    file_glob: true
-    file: bin/*
-    skip_cleanup: true
-    on:
-        tags: true
+  provider: releases
+  api_key:
+    secure: nMOD3Zqecv/QDX9HLDjlWlFLCDvaubyNyFSyMOFJDGDiSyRYOyrB4b/Udj3pbFuIe5q3RzHupuyk3IWV5Sp9rokyGxRJ3ALA/O0GDhv+u1yxXmQMUezMVg1EdUCvQ8VC90iEVt5wxRg8UvIjsu4WatkaNAn4r6f/0eCUZGgMrQbOEWG5UA4VW/GtPMHXTFEp14EAwWhGP2ZoNsMBwHEncO/5RK4caUB4sgtot9nojTbWoQAvKA5TbWzpjOZGURcltzmx590pi7e/8x8MhtTiHgWmFu0XHjPdGlnyQdlQuy609frrZ/IzlUVB+OpTR8irPB0m6+bM33YYOc1DvIvBsWAm6EGcmYV9GCIykewyU9tkkpS6JaURhc4GjZfmOqaG9xoy8pDvWlthWTV/eX5AjNdFx/YMVrUZOle3/SarRvypRoPaUhcqtvWmxAstYyF4/9G2Fdc8dDBk2dsRRlQ3TfRF2v1XuUvPi1Fvbo84JfSgVSVzg7yCupP3Gva4vjsc1JUSZpaNBkdQdxdm9vnFb6ajKXERaWf+hwlDwEakmyBYQE43h8T0Q7IwQz4o1r4IqMhicRqLG4ZPgNJROH0nGc/FatN66RxJFfwg/dan0bItHedUKnBwnm5Ea5b6LFxUNMRBBr9NXyy4Kb4XjrUuhPJ29FPqJZ8XUlq9p/EsThI=
+  file: bin/*
+  file_glob: true
+  skip_cleanup: true
+  on:
+    repo: stefan-kiss/getbin
+    tags: true
+
