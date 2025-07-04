@@ -3,7 +3,7 @@ module github.com/stefan-kiss/getbin
 go 1.15
 
 require (
-	github.com/hashicorp/go-getter v1.7.0
+	github.com/hashicorp/go-getter v1.7.5
 	github.com/mholt/archiver/v3 v3.3.0
 	github.com/sirupsen/logrus v1.6.0
 	github.com/spf13/cobra v1.0.0
